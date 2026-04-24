@@ -1,0 +1,32 @@
+{
+  "database": {
+    "host": "localhost",
+    "port": 5432,
+    "name": "spanishgo_db",
+    "user": "db_user",
+    "password": "your_secure_password_here",
+    "ssl": false,
+    "pool": {
+      "min": 2,
+      "max": 10
+    }
+  },
+  "api": {
+    "baseUrl": "http://localhost:3000",
+    "version": "v1",
+    "timeout": 30000,
+    "retryAttempts": 3,
+    "endpoints": {
+      "auth": "/api/v1/auth",
+      "users": "/api/v1/users",
+      "lessons": "/api/v1/lessons",
+      "progress": "/api/v1/progress",
+      "vocabulary": "/api/v1/vocabulary"
+    }
+  },
+  "server": {
+    "port": 3000,
+    "environment": "development",
+    "logLevel": "info"
+  }
+}
