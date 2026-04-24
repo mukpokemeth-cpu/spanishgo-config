@@ -1,32 +1,9 @@
 {
-  "database": {
-    "host": "localhost",
-    "port": 5432,
-    "name": "spanishgo_db",
-    "user": "db_user",
-    "password": "your_secure_password_here",
-    "ssl": false,
-    "pool": {
-      "min": 2,
-      "max": 10
-    }
-  },
-  "api": {
-    "baseUrl": "http://localhost:3000",
-    "version": "v1",
-    "timeout": 30000,
-    "retryAttempts": 3,
-    "endpoints": {
-      "auth": "/api/v1/auth",
-      "users": "/api/v1/users",
-      "lessons": "/api/v1/lessons",
-      "progress": "/api/v1/progress",
-      "vocabulary": "/api/v1/vocabulary"
-    }
-  },
-  "server": {
-    "port": 3000,
-    "environment": "development",
-    "logLevel": "info"
-  }
+  "_comment": "SpanishGo remote backend config. Native apps fetch this JSON at launch to discover the current backend URL. When the Emergent preview URL rotates, prepend the new URL to backend_urls and update primary_backend_url.",
+  "version": 1,
+  "updated_at": "2026-04-24",
+  "primary_backend_url": "https://spanish-music-learn.preview.emergentagent.com",
+  "backend_urls": [
+    "https://spanish-music-learn.preview.emergentagent.com"
+  ]
 }
