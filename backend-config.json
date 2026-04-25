@@ -1,9 +1,10 @@
 {
-  "_comment": "SpanishGo remote backend config. Native apps fetch this JSON at launch to discover the current backend URL. When the Emergent preview URL rotates, prepend the new URL to backend_urls and update primary_backend_url.",
-  "version": 1,
-  "updated_at": "2026-04-24",
-  "primary_backend_url": "https://spanish-music-learn.preview.emergentagent.com",
-  "backend_urls": [
-    "https://spanish-music-learn.preview.emergentagent.com"
+  \"_comment\": \"SpanishGo remote backend config. Native apps fetch this JSON at launch to discover the current backend URL. Deployed at the stable .emergent.host production URL — should NEVER need to rotate. The legacy preview URL is kept only as a transitional fallback for old IPAs.\",
+  \"version\": 2,
+  \"updated_at\": \"2026-04-25\",
+  \"primary_backend_url\": \"https://xpbug-resolver.emergent.host\",
+  \"backend_urls\": [
+    \"https://xpbug-resolver.emergent.host\",
+    \"https://spanish-music-learn.preview.emergentagent.com\"
   ]
 }
