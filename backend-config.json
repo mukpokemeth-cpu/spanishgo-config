@@ -1,10 +1,31 @@
 {
-  \"_comment\": \"SpanishGo remote backend config. Native apps fetch this JSON at launch to discover the current backend URL. Deployed at the stable .emergent.host production URL — should NEVER need to rotate. The legacy preview URL is kept only as a transitional fallback for old IPAs.\",
-  \"version\": 2,
-  \"updated_at\": \"2026-04-25\",
-  \"primary_backend_url\": \"https://xpbug-resolver.emergent.host\",
-  \"backend_urls\": [
-    \"https://xpbug-resolver.emergent.host\",
-    \"https://spanish-music-learn.preview.emergentagent.com\"
-  ]
+  "version": 2,
+  "schema_version": "2.0.0",
+  "api_version": "v1",
+  "status": "operational",
+  "updated_at": "2026-04-25",
+  "ttl_seconds": 86400,
+  "comment": "SpanishGo remote backend config. Native apps fetch this JSON at launch to discover the current backend URL. Deployed at the stable .emergent.host production URL.",
+  "primary_backend_url": "https://xpbug-resolver.emergent.host",
+  "backend_urls": [
+    {
+      "url": "https://xpbug-resolver.emergent.host",
+      "environment": "production",
+      "region": "primary",
+      "priority": 1
+    },
+    {
+      "url": "https://spanish-music-learn.preview.emergentagent.com",
+      "environment": "staging",
+      "region": "secondary",
+      "priority": 2
+    }
+  ],
+  "client_settings": {
+    "timeout_ms": 5000,
+    "max_retries": 3,
+    "retry_backoff_ms": 1000
+  },
+  "deprecation_notice": null,
+  "support_url": "https://support.example.com/spanishgo"
 }
